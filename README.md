@@ -21,10 +21,10 @@ The auto_schedule function dynamically selects the most suitable scheduling algo
 
 * Git Clone this Repository
 ```bash
-    https://github.com/ShivanshKasaudhan/CPU-Scheduler.git
+    git clone https://github.com/ShivanshKasaudhan/CPU-Scheduler.git
 ```
 
-* Compile the scheduler.cpp file using a compiler with C++ 11 or higher
+* Enter into main directory and then compile the scheduler.cpp file using a compiler with C++ 11 or higher
 ```bash
     g++ -o scheduler.exe scheduler.cpp
 ```
