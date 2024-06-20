@@ -1,3 +1,4 @@
+
 # CPU Scheduler
 
 
@@ -13,14 +14,9 @@ This project implements 7 CPU scheduling algorithms as follows:
 * Multilevel Queue Scheduling 
 * Smart Scheduling
 
-Smart Scheduling which chooses best algorithm depending upon the input parameters to minimize Average Waiting Time of processes and maximize CPU usage.
+Smart Scheduling which chooses most suitable algorithm depending upon the input parameters to ensure efficient task scheduling along with  minimizing Average Waiting Time of processes and maximizing CPU usage.
 
-## Table of Contents
-- [Installation](#installation)
-- [Technologies Used](#technologies-used)
-- [Interaction Flow](#interaction-flow)
-- [How to use the application](#how_to_use_the_application)
-- [Smart Scheduling](#smart_scheduling)
+The auto_schedule function dynamically selects the most suitable scheduling algorithm based on input process characteristics to ensure efficient task scheduling.
 ## Installation
 
 * Git Clone this Repository
@@ -80,7 +76,8 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
     4. Priority : Priority Value of corresponding processes, each of them separated by space.
     5. Time Quantum : It should be a single positive integer.
 
-*Note: There should be a valid arrival time,burst time, and priority value for each process ID.*
+> [!NOTE]
+> There should be a valid arrival time,burst time, and priority value for each process ID.
 
 * After entering each input field correctly, click oon Run Scheduler Button. An Output table will be displayed showing Arrival Time, Burst Time, Completion Time, Turnaround Time and Waiting Time corresponding to each process.
 * The Average Turnaround Time and Average Waiting Time will be displayed at the bottom of their respective columns.
@@ -474,9 +471,30 @@ void auto_schedule(std::vector<Process> & processes){
 }
 ```
 #### Explanation:
+* The auto_schedule function dynamically selects the most suitable scheduling algorithm based on input process characteristics to ensure efficient task scheduling.
 * The scheduling algorithm is chosen based on the characteristics of the processes:
     * If the range of priorities is large,      Multi-Level Queue Scheduling is used.
     * If the range of arrival times is small, Shortest Remaining Time First is used.
     * If the range of arrival times is very large, Round Robin is used.
     * If none of these conditions are met, First Come First Serve is used.
 * The chosen scheduling algorithm is then applied to the processes to compute the performance metrics.
+## Integration via IPC
+In the CPU Scheduler application, the frontend (Electron) and backend (C++) communicate using IPC mechanisms provided by Electron's ipcRenderer and ipcMain modules. IPC allows asynchronous communication between the Electron main process and the C++ backend process, facilitating data exchange and coordination of scheduling tasks.
+
+### Electron Frontend
+The Electron frontend serves as the user interface layer, implemented using HTML, CSS, and JavaScript. It utilizes the Electron framework to create a windowed
+## My Learning Takeaways from the Project
+
+* ####  Understanding and Implementing Scheduling Algorithms
+    The project was a fascinating dive into operating system fundamentals and enhanced my understanding of various CPU scheduling algorithms. Implementing these in C++ showcased their practical application and efficiency in process management. Working with advanced C++ features and debugging scheduling algorithms sharpened my coding and problem-solving skills. It reinforced the importance of selecting the right data structures and methods for specific tasks.
+
+* #### Effective Integration and Communication
+    It was a challenge to use Electron JS, a new framework for me, to build the project. Using IPC in Electron for data flow underscored the importance of modular design and clear communication within applications. Despite the learning curve, it was rewarding to apply core computer science concepts in this new environment.
+
+* Overall, this project taught me a lot about OS concepts, software development, and practical problem-solving. It was a valuable experience that deepened my understanding of computer systems and enhanced my skills in software engineering.
+
+## The resources/references used while working on the project
+* Scheduling algorithms by [Neso Academy](https://youtube.com/playlist?list=PLBlnK6fEyqRitWSE_AyyySWfhRgyA-rHk&si=Kn5pgYnNhNxBF0DG)
+* [Electron Documentation](https://www.electronjs.org/blog/electron-doumentation)
+* For Implementations : [GeeksforGeeks](https://www.geeksforgeeks.org/program-for-fcfs-cpu-scheduling-set-1/)
+
