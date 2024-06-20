@@ -12,6 +12,7 @@ This project implements 7 CPU scheduling algorithms as follows:
 * Priority Scheduling
 * Multilevel Queue Scheduling.
 * Smart Scheduling
+
 Smart Scheduling chooses the best algorithm depending on the input parameters to minimize the Average Waiting Time of processes and maximize CPU usage.
 
 ## Table of Contents
@@ -61,3 +62,4 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
 5. The Electron frontend receives the scheduling results, updates the UI to display the process details, and shows performance metrics such as Completion time, Turnaround time, and Waiting Time for each process with average turnaround time and average waiting time.
 ## How to use the application
 The first look of the application will be like this :
+![Figure 1: Application's initial look](images/InitialLook.png)
