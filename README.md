@@ -14,7 +14,7 @@ This project implements 7 CPU scheduling algorithms as follows:
 * Multilevel Queue Scheduling 
 * Smart Scheduling
 
-Smart Scheduling which chooses most suitable algorithm depending upon the input parameters to ensure efficient task scheduling along with  minimizing Average Waiting Time of processes and maximizing CPU usage.
+Smart Scheduling chooses the most suitable algorithm depending upon the input parameters to ensure efficient task scheduling along with  minimizing the Average Waiting Time of processes and maximizing CPU usage.
 
 The auto_schedule function dynamically selects the most suitable scheduling algorithm based on input process characteristics to ensure efficient task scheduling.
 ## Installation
@@ -23,8 +23,11 @@ The auto_schedule function dynamically selects the most suitable scheduling algo
 ```bash
     git clone https://github.com/ShivanshKasaudhan/CPU-Scheduler.git
 ```
-
-* Enter into main directory and then compile the scheduler.cpp file using a compiler with C++ 11 or higher
+* Enter into the main directory
+  ```bash
+  cd CPU-Scheduler
+  ````
+* Compile the scheduler.cpp file using a compiler with C++ 11 or higher
 ```bash
     g++ -o scheduler.exe scheduler.cpp
 ```
@@ -54,9 +57,9 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
 
 3. The backend receives the IPC message, processes the scheduling request using the specified algorithm, and computes the necessary performance metrics.
 
-4. After completing the scheduling process, the backend sends a response back to the Electron frontend, where the otput is formatted to table.
+4. After completing the scheduling process, the backend sends a response back to the Electron frontend, where the output is formatted to a table.
 
-5. The Electron frontend receives the scheduling results, updates the UI to display the process details and shows performance metrics such as Completion time , Turnaround time and Waiting Time for each process with average turnaround time and average waiting time.
+5. The Electron frontend receives the scheduling results, updates the UI to display the process details, and shows performance metrics such as Completion time, Turnaround time, and Waiting Time for each process with average turnaround time and average waiting time.
 ## How to use the application
 * The first look of the application will be like this :
 
@@ -70,18 +73,18 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
 ![Algorithm Selection](images/Algo_Select.png)
 *Figure 2: The Algorithm Selection*
 
-* Now the user is free to input any number of processes. User is expected to fill input parameters depending on the algorithm selected as following:
+* Now the user is free to input any number of processes. The user is expected to fill in input parameters depending on the algorithm selected as follows:
 
-    1. Process IDs : separated by spaces, e.g. 1 2 3 4 5 
-    2. Burst Times : Burst Time of corresponding process, each of them separated by space. It cannot be equal to zero.
-    3. Arrival Times : Arrival Time of corresponding processes, each of them separated by space.
-    4. Priority : Priority Value of corresponding processes, each of them separated by space.
-    5. Time Quantum : It should be a single positive integer.
+    1. Process IDs: separated by spaces, e.g. 1 2 3 4 5 
+    2. Burst Times: Burst times of corresponding process, each of them separated by space. It cannot be equal to zero.
+    3. Arrival Times: Arrival Times of corresponding processes, each of them separated by space.
+    4. Priority: Priority Value of corresponding processes, each of them separated by space.
+    5. Time Quantum: It should be a single positive integer.
 
 > [!NOTE]
-> There should be a valid arrival time,burst time, and priority value for each process ID.
+> There should be a valid arrival time, burst time, and priority value for each process ID.
 
-* After entering each input field correctly, click oon Run Scheduler Button. An Output table will be displayed showing Arrival Time, Burst Time, Completion Time, Turnaround Time and Waiting Time corresponding to each process.
+* After entering each input field correctly, click on the Run Scheduler Button. An Output table will be displayed showing Arrival Time, Burst Time, Completion Time, Turnaround Time, and Waiting Time corresponding to each process.
 * The Average Turnaround Time and Average Waiting Time will be displayed at the bottom of their respective columns.
 
 
@@ -94,9 +97,9 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
 
 ## Smart Scheduling
 
-* When User selects the *Smart Scheduling* option, then the process parameters are analyzed in the backend. And depending upon the variations in priority values and arrival times, the scheduler automatically selects best scheduling algorithm for the input processes.
+* When the User selects the *Smart Scheduling* option, then the process parameters are analyzed in the backend. Depending upon the variations in priority values and arrival times, the scheduler automatically selects the best scheduling algorithm for the input processes.
 
-* Here is an example to illustrate the difference between Smart Scheduling vs Round-Robin Scheduling on same set of procecsses. 
+* Here is an example to illustrate the difference between Smart Scheduling vs Round-Robin Scheduling on the same set of processes. 
 * There is a _considerable drop_ in Average Waiting Time and Average Turnaround Time when switched to Smart Scheduling.
 
 ![Example of Smart Scheduling](images/Input_Output_Smart.png)
