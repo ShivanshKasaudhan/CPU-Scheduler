@@ -1,6 +1,6 @@
-
 # CPU Scheduler
 
+* Author: Shivansh Kasaudhan
 
 ## Project Description
 Operating systems play a crucial role in managing computer resources efficiently, with process scheduling being a fundamental component. A CPU scheduler is responsible for managing the execution of processes. It decides which process should utilize the CPU and for how long, ensuring efficient resource utilization.
@@ -62,6 +62,8 @@ The interaction flow between the frontend and backend of the CPU Scheduler appli
 
 ![Application's initial look](images/InitialLook.png)
 *Figure 1: Application's initial look*
+
+* User can toggle between Light and Dark Modes using Toggle Button.
 
 * User can select one of the 6 pre-defined CPU Scheduling algorithms I have implemented.
 
@@ -489,7 +491,7 @@ The Electron frontend serves as the user interface layer, implemented using HTML
     The project was a fascinating dive into operating system fundamentals and enhanced my understanding of various CPU scheduling algorithms. Implementing these in C++ showcased their practical application and efficiency in process management. Working with advanced C++ features and debugging scheduling algorithms sharpened my coding and problem-solving skills. It reinforced the importance of selecting the right data structures and methods for specific tasks.
 
 * #### Effective Integration and Communication
-    It was a challenge to use Electron JS, a new framework for me, to build the project. Using IPC in Electron for data flow underscored the importance of modular design and clear communication within applications. Despite the learning curve, it was rewarding to apply core computer science concepts in this new environment.
+    It was a challenge to use Electron JS, a new framework for me, to build the project.Using IPC in Electron for data flow underscored the importance of modular design and clear communication within applications.Despite the learning curve, it was rewarding to apply core computer science concepts in this new environment.
 
 * Overall, this project taught me a lot about OS concepts, software development, and practical problem-solving. It was a valuable experience that deepened my understanding of computer systems and enhanced my skills in software engineering.
 
